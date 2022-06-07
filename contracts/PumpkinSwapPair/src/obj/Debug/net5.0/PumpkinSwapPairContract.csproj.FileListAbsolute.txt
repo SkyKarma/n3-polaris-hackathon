@@ -1,0 +1,12 @@
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapPair/src/bin/Debug/net5.0/PumpkinSwapPairContract.deps.json
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapPair/src/bin/Debug/net5.0/PumpkinSwapPairContract.dll
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapPair/src/bin/Debug/net5.0/PumpkinSwapPairContract.pdb
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapPair/src/obj/Debug/net5.0/PumpkinSwapPairContract.csproj.AssemblyReference.cache
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapPair/src/obj/Debug/net5.0/PumpkinSwapPairContract.GeneratedMSBuildEditorConfig.editorconfig
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapPair/src/obj/Debug/net5.0/PumpkinSwapPairContract.AssemblyInfoInputs.cache
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapPair/src/obj/Debug/net5.0/PumpkinSwapPairContract.AssemblyInfo.cs
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapPair/src/obj/Debug/net5.0/PumpkinSwapPairContract.csproj.CoreCompileInputs.cache
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapPair/src/obj/Debug/net5.0/PumpkinSwapPairContract.dll
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapPair/src/obj/Debug/net5.0/refint/PumpkinSwapPairContract.dll
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapPair/src/obj/Debug/net5.0/PumpkinSwapPairContract.pdb
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapPair/src/obj/Debug/net5.0/ref/PumpkinSwapPairContract.dll

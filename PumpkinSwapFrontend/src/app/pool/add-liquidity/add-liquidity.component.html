@@ -1,0 +1,111 @@
+<div class="back-icon" routerLink="/pool">
+    <mat-icon>arrow_back_ios_new</mat-icon>
+</div>
+
+<h1>Add Liquidity</h1>
+<div *ngIf="token.get('tokenAAvailable').value !== ''" class="swa">
+    <span>Available</span>
+    <span>{{token.get('tokenAAvailable').value | amountConverter}}</span>
+</div>
+<div class="lpA-container">
+    <input 
+        type="text" 
+        autocomplete="off" 
+        value="{{token.get('tokenAAmount').value}}" 
+        matInput 
+        (input)="tokenAAmountInput($event.target)" 
+        placeholder="0.0">
+
+    <span (click)="openTokenSelectDialog('tokenA')">{{token.get('tokenASymbol').value}}<mat-icon>keyboard_arrow_down</mat-icon></span>
+</div>
+
+<div class="add-icon-container">
+    <mat-icon>add</mat-icon>
+</div>
+
+<div *ngIf="token.get('tokenBAvailable').value !== ''" class="swa">
+    <span>Available</span>
+    <span>{{token.get('tokenBAvailable').value | amountConverter}}</span>
+</div>
+<div class="lpA-container">
+    <input type="number" autocomplete="off" value="{{token.get('tokenBAmount').value}}" matInput (input)="tokenBAmountInput($event.target)" placeholder="0.0">
+    <span (click)="openTokenSelectDialog('tokenB')" 
+        *ngIf="token.get('tokenBSymbol').value !== ''">{{token.get('tokenBSymbol').value}}<mat-icon>keyboard_arrow_down</mat-icon></span>
+    <span (click)="openTokenSelectDialog('tokenB')" 
+        *ngIf="token.get('tokenBSymbol').value === ''">Selet token pair <mat-icon>keyboard_arrow_down</mat-icon></span>
+</div>
+
+<div *ngIf="showPoolShare">
+    <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                Prices and pool share
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="transaction-row-details">
+            <span>Your share of the pool</span>
+            <span>{{token.get('poolShares').value}} %</span>
+          </div>
+          
+          <div class="transaction-row-details">
+            <span>1 {{token.get('tokenASymbol').value}}</span>
+            <span>{{token.get('tokenAPerTokenB').value}} {{token.get('tokenBSymbol').value}}</span>
+            
+          </div>
+
+          <div class="transaction-row-details">
+            <span>1 {{token.get('tokenBSymbol').value}}</span>
+            <span>{{token.get('tokenBPerTokenA').value}} {{token.get('tokenASymbol').value}}</span>
+          </div>
+          
+        </mat-expansion-panel>
+    </mat-accordion>
+    
+</div>
+
+
+<div class="liquidity-info" *ngIf="firstLiquidity && !poolDoesNotExist && !loading">
+    <p>You are the first liquidity provider.</p>
+    <p>The ratio of tokens you add will set the price of this pool.</p>
+</div>
+
+<div class="liquidity-info error" *ngIf="poolDoesNotExist && !loading">
+    <p>Liquidity pool does not exist!</p> 
+</div>
+
+<div class="deploy-button-container" *ngIf="poolDoesNotExist && !loading">
+    <button class="mat-stroked-button-color"
+    mat-stroked-button
+    appDebounceClick
+    routerLink="/pool/all">
+        View all available liquidity pools
+    </button>
+</div>
+
+<div class="spinner-container" *ngIf="loading">
+    <mat-spinner diameter="50"></mat-spinner>
+</div>
+
+<div class="deploy-button-container" *ngIf="!poolDoesNotExist">
+    <button *ngIf="!addingLP && txId === ''" class="mat-stroked-button-color"
+    mat-stroked-button
+    appDebounceClick
+    (click)="addLiquidity()">
+    Add Liquidity
+    </button>
+</div>
+
+<div class="liquidity-info" *ngIf="!firstLiquidity && !poolDoesNotExist && !loading && !addingLP && txId === ''">
+    <p>When you add liquidity, you will receive pool tokens representing your position.
+        These tokens automatically earn fees proportional to your share of the pool.</p>
+</div>
+
+<div class="spinner-container" *ngIf="addingLP">
+    <mat-spinner diameter="40"></mat-spinner>
+</div>
+  
+<div class="txc" *ngIf="txId !== ''">
+    <p>Your transaction has been broadcasted to the network, it may take up to 15s to process</p>
+    <a target="_blank" href="https://neo3.testnet.neotube.io/transaction/{{txId}}">Check the progress on NeoTube</a>
+</div>

@@ -1,0 +1,12 @@
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/bin/Debug/net5.0/PumpkinSwapNepDeployerContract.deps.json
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/bin/Debug/net5.0/PumpkinSwapNepDeployerContract.dll
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/bin/Debug/net5.0/PumpkinSwapNepDeployerContract.pdb
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/obj/Debug/net5.0/PumpkinSwapNepDeployerContract.csproj.AssemblyReference.cache
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/obj/Debug/net5.0/PumpkinSwapNepDeployerContract.GeneratedMSBuildEditorConfig.editorconfig
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/obj/Debug/net5.0/PumpkinSwapNepDeployerContract.AssemblyInfoInputs.cache
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/obj/Debug/net5.0/PumpkinSwapNepDeployerContract.AssemblyInfo.cs
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/obj/Debug/net5.0/PumpkinSwapNepDeployerContract.csproj.CoreCompileInputs.cache
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/obj/Debug/net5.0/PumpkinSwapNepDeployerContract.dll
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/obj/Debug/net5.0/refint/PumpkinSwapNepDeployerContract.dll
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/obj/Debug/net5.0/PumpkinSwapNepDeployerContract.pdb
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/obj/Debug/net5.0/ref/PumpkinSwapNepDeployerContract.dll

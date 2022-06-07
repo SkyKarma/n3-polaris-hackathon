@@ -1,0 +1,131 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+body
+{
+    font-family: "Kanit", sans-serif !important;
+    background-color: #222629;
+}
+
+.center 
+{
+    justify-content: center;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1, input
+{
+    color: white;
+}
+
+h1
+{
+    font-size: 16px !important;
+    font-weight: bold !important;
+    letter-spacing: 0.1mm !important;
+}
+
+.mat-stroked-button-color
+{
+    border-color: #F9A66C !important;
+    border-radius: 10px;
+    color:#f9a66c;
+}
+
+.custom-modalbox {
+    mat-dialog-container {
+        background: #272727;
+        color: white;
+        border-radius: 15px;
+        
+        span
+        {
+            color: white;
+        }
+    }
+}
+
+.custom-token-select-modalbox-no-height {
+    mat-dialog-container {
+        background: #272727;
+        color: white;
+        border-radius: 15px;
+        padding-right: 0;
+        padding-left: 0;
+        width: 400px;
+
+        span
+        {
+            color: white;
+        }
+    }
+}
+
+.custom-token-select-modalbox {
+    mat-dialog-container {
+        background: #272727;
+        color: white;
+        border-radius: 15px;
+        padding-right: 0;
+        padding-left: 0;
+        width: 400px;
+        min-height: 70vh;
+
+        span
+        {
+            color: white;
+        }
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.slide-In-Out-Container
+{
+   max-height: 0px;
+   overflow-y: hidden;
+   transition: ease-in-out 400ms max-height;
+}
+
+.slide-In-Out-Container.opened 
+{
+   margin-top: 30px;
+   max-height: 100%;
+   transition: ease-in-out 600ms max-height;
+}
+
+button
+{
+    border-radius: 5px !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+}
+
+.mat-progress-spinner circle, .mat-spinner circle
+{
+    stroke: #cbe521;
+}
+
+.spc
+{
+    display: flex;
+    justify-content: center;
+}
+
+.txc
+{
+   text-align: center;
+   font-weight: bold;
+   margin-top: 4vh;
+}

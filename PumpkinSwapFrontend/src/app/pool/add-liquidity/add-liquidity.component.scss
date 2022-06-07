@@ -1,0 +1,145 @@
+:host
+{
+   width: 28rem;
+   color: white;
+}
+
+.back-icon
+{
+    margin-bottom: 4vh;
+    cursor: pointer;
+}
+
+.pool-overview
+{
+   display: flex;
+   align-items: center;
+}
+
+.lpA-container,
+.lpB-container
+{
+   display: flex;
+   padding: 10px 15px;
+   border-radius: 5px;
+   border-top-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   font-size: 16px;
+   background: #123c39;
+   font-weight: bold;
+   letter-spacing: 0.1mm;
+
+   span
+   {
+      cursor: pointer;
+      padding: 10px 10px;
+      padding-left: 18px;
+      background: #0e2b42;
+      border-radius: 5px;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+   }
+}
+
+::placeholder {
+   color: gray;
+   opacity: 1; 
+ }
+
+ input
+ {
+   background: unset;
+   border: unset;
+   flex: 1 1 0;
+ }
+ 
+ input:focus{
+   outline: none;
+}
+
+*:focus {
+   outline: none;
+}
+
+.add-icon-container
+{
+   display: flex;
+   justify-content: center;
+
+   .mat-icon
+   {
+   font-size: 30px;
+   width: 30px;
+   height: 30px;
+   }
+}
+
+.liquidity-info
+{
+   margin-top: 4vh;
+   text-align: center;
+}
+
+.error
+{
+   color: crimson;
+   font-size: 16px;
+}
+
+.deploy-button-container
+{
+   margin-top: 25px;
+   display: flex;
+
+   button
+   {
+      width: 100%;
+      padding: 4px 0;
+   }
+}
+
+.spinner-container
+{
+   display: flex;
+   justify-content: center;
+   margin-top: 1vh;
+   margin-bottom: 1vh;
+}
+
+.mat-expansion-panel
+{
+   box-shadow: unset;
+   background: unset;
+
+   .mat-expansion-panel-header-title
+   {
+      color: gray;
+      font-size: 13px;
+   }
+}
+
+::ng-deep .mat-expansion-indicator:after {
+   color: gray;
+}
+
+.transaction-row-details
+{
+   display: flex;
+   justify-content: space-between;
+   color: gray;
+   font-size: 13px;
+   padding: 2px;
+}
+
+.swa
+{
+   display: flex;
+   justify-content: space-between;
+   color: gray;
+   font-size: 12px;
+   font-weight: bold;
+   padding: 0 20px;
+}

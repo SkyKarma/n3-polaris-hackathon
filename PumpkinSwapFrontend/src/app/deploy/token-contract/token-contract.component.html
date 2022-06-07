@@ -1,0 +1,61 @@
+<div class="back-icon" routerLink="/utility">
+    <mat-icon>arrow_back_ios_new</mat-icon>
+</div>
+
+<form *ngIf="!deployed" [formGroup]="token">
+    <h1>Token Details</h1>
+    <div class="input-container">
+        <input type="text" autocomplete="off" matInput formControlName="name" placeholder="Name">
+    </div>
+    <div class="input-container">
+        <input type="text" autocomplete="off" matInput formControlName="symbol" placeholder="Symbol">
+    </div>
+    <div class="input-container">
+        <input type="number" autocomplete="off" matInput formControlName="decimals" placeholder="Decimals">
+    </div>
+    <div class="input-container">
+        <input type="number" autocomplete="off" matInput formControlName="supply" placeholder="Supply">
+    </div>
+    <h1>Extras</h1>
+    <div class="input-container">
+        <input type="text" autocomplete="off" matInput formControlName="author" placeholder="Author">
+    </div>
+    <div class="input-container">
+        <input type="email" autocomplete="off" matInput formControlName="email" placeholder="Email">
+    </div>
+    <div class="input-container">
+        <input type="text" autocomplete="off" matInput formControlName="description" placeholder="Description">
+    </div>
+</form>
+
+<div *ngIf="!deployed" class="deploy-button-container">
+    <button class="mat-stroked-button-color"
+    mat-stroked-button
+    appDebounceClick
+    (click)="deployToken()">
+    Deploy NEP17 Token Contract
+    </button>
+</div>
+
+<div class="spinner-container" *ngIf="loading">
+    <mat-spinner diameter="100"></mat-spinner>
+</div>
+
+<div *ngIf="deployed && !loading">
+    <h1>Successfully deployed new contract</h1>
+
+    <div class="new-contract">
+        <span>ScriptHash </span>
+        <span>{{newContractHash}}</span>
+    </div>
+    
+
+    <div class="deploy-button-container">
+        <button class="mat-stroked-button-color"
+        mat-stroked-button
+        appDebounceClick
+        routerLink="/pool/create/{{newContractHash}}">
+        Create New Liquidity Pool
+        </button>
+    </div>
+</div>

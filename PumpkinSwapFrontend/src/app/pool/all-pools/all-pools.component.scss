@@ -1,0 +1,63 @@
+:host
+{
+   width: 50rem;
+   color: white;
+}
+
+.back-icon
+{
+    margin-bottom: 4vh;
+    cursor: pointer;
+}
+
+.active-pools-container
+{
+    color: white;
+    margin-top: 3vh;
+}
+
+.full-width
+{
+    width: 100%;
+
+    .flex-end
+    {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.f16
+{
+    font-size: 16px;
+}
+
+.tac
+{
+    text-align: center;
+}
+
+table
+{
+    border-spacing: 0 1.5em;
+    border-collapse: separate;
+}
+
+.lpth
+{
+    color:#cbe521;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.1mm;
+}
+
+button
+{
+    color:white;
+    border-color: white !important;
+}
+
+.mat-icon
+{
+    cursor: pointer;
+}

@@ -1,0 +1,62 @@
+<div class="spc" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</div>
+
+<ng-container *ngIf="!loading">
+    <div class="ts">{{token.tokenASymbol}} / {{token.tokenBSymbol}}</div>
+
+    <div class="vpc">
+        <div class="vpdc">
+            <app-doughnut-chart [doughnutChartData]="doughnutChartData"></app-doughnut-chart>
+        </div>
+        <div class="vpd">
+            <div class="vpdr">
+                <span>Pool Supply</span>
+                <span>{{token.totalSupplyDisplay | amountConverter}}</span>
+            </div>
+            <div class="vpdr pl">
+                <span>{{token.tokenA.symbol}}</span>
+                <span>{{token.tokenATotalDisplay | amountConverter}}</span>
+            </div>
+            <div class="vpdr pl">
+                <span>{{token.tokenB.symbol}}</span>
+                <span>{{token.tokenBTotalDisplay | amountConverter}}</span>
+            </div>
+            <div class="sc"></div>
+            <div class="vpdr">
+                <span>Locked Supply</span>
+                <span>{{totalAmountLockedDisplay | amountConverter}}</span>
+            </div>
+            <div class="vpdr pl">
+                <span>{{token.tokenA.symbol}}</span>
+                <span>{{totalTokenAAmountLocked | amountConverter}}</span>
+            </div>
+            <div class="vpdr pl">
+                <span>{{token.tokenB.symbol}}</span>
+                <span>{{totalTokenBAmountLocked | amountConverter}}</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <h1>Liqudity Pool Locks</h1>
+        <table *ngIf="locks.length > 0" class="full-width">
+            <tr>
+                <th>Owner</th>
+                <th>Amount</th>
+                <th class="flex-end">Unlock (Days)</th>
+            </tr>
+            
+            <tr *ngFor="let l of locks">
+                <td class="lpth">{{l.ownerShortened}}</td>
+                <td>{{l.amount | amountConverter}}</td>
+                <td class="flex-end">{{l.endDate}}</td>
+            </tr>
+        </table>
+
+        <span *ngIf="locks.length === 0">
+            No locks have been created for this pool!!
+        </span>
+    </div>
+</ng-container>

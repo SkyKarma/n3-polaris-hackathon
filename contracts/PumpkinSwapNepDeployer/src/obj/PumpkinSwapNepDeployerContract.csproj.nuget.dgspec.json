@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/PumpkinSwapNepDeployerContract.csproj": {}
+  },
+  "projects": {
+    "/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/PumpkinSwapNepDeployerContract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/PumpkinSwapNepDeployerContract.csproj",
+        "projectName": "PumpkinSwapNepDeployerContract",
+        "projectPath": "/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/PumpkinSwapNepDeployerContract.csproj",
+        "packagesPath": "/home/s/.nuget/packages/",
+        "outputPath": "/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapNepDeployer/src/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/s/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Neo.SmartContract.Framework": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

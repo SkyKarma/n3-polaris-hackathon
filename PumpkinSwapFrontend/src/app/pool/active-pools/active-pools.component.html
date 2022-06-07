@@ -1,0 +1,60 @@
+<div class="spc" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</div>
+
+<div class="active-pools-container">
+    <div class="active-liquidity-pool" *ngIf="!walletProvider.walletInitialized.value && !loading">Conncet wallet to view your liquidity positions here.</div>
+
+
+    <ng-container *ngIf="walletProvider.walletInitialized.value && !loading">
+        <div class="hb">Your positions</div>
+        <ng-container *ngFor="let pool of pools">
+            <div class="pr">
+                <div class="phc">{{pool['tokenA']}} / {{pool['tokenB']}}</div>
+                <div class="flex-end">
+                    <button class="mat-stroked-button-color" 
+                        mat-stroked-button
+                        appDebounceClick
+                        routerLink="/pool/remove-liquidity/{{pool['contract']}}">Remove Liquidity
+                    </button>
+                </div>    
+            </div>
+            
+            <div class="lpmc">
+                <mat-accordion>
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            More details
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      
+                    <div class="mdr">
+                        <span>Total supply</span>
+                        <span>{{pool['totalSupply'] | amountConverter}}</span>
+                    </div>
+                    <div class="mdr">
+                        <span>Your position</span>
+                        <span>{{pool['amount'] | amountConverter}}</span>
+                    </div>
+                    <div class="mdr">
+                        <span>Shares of pool</span>
+                        <span>{{pool['sharesOfPool']}} %</span>
+                    </div>
+                    <div class="mdr">
+                        <span>Total {{pool['tokenASymbol']}}</span>
+                        <span>{{pool['tokenAAmount'] | amountConverter}} {{pool['tokenASymbol']}}</span>
+                    </div>
+                    <div class="mdr">
+                        <span>Total {{pool['tokenBSymbol']}}</span>
+                        <span>{{pool['tokenBAmount'] | amountConverter}} {{pool['tokenBSymbol']}}</span>
+                    </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            
+            </div>
+            
+        </ng-container>
+    </ng-container>
+    
+</div>

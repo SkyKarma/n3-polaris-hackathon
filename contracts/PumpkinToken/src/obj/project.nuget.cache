@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "BobUQPTLh5pPGBcboUJ57d6RymWbhBPxcir9tbeUvpKIYwZ+VLTXKLqyQGzTro95KUL8NptqWmWpHP0L9fUvJA==",
+  "success": true,
+  "projectFilePath": "/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinToken/src/PumpkinTokenContract.csproj",
+  "expectedPackageFiles": [
+    "/home/s/.nuget/packages/neo.smartcontract.framework/3.0.0/neo.smartcontract.framework.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

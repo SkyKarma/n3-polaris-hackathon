@@ -1,0 +1,39 @@
+<div class="spc" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</div>
+
+
+<div class="back-icon" *ngIf="!loading" routerLink="/pool">
+    <mat-icon>arrow_back_ios_new</mat-icon>
+</div>
+
+<div class="active-pools-container" *ngIf="!loading">
+    <table class="full-width">
+        <tr>
+            <th>Pool</th>
+            <th class="tac">Total supply</th>
+            <th class="tac">Add Liquidity</th>
+            <th class="flex-end">View Pool</th>
+        </tr>
+        
+        <ng-container *ngFor="let pool of pools">
+            <tr>
+                <td class="lpth">{{pool['symbolOne']}} / {{pool['symbolTwo']}}</td>
+                <td class="tac">{{pool['totalSupply'] | amountConverter}}</td>
+                <td class="tac">
+                    <mat-icon appDebounceClick
+                    routerLink="/pool/add-liquidity/{{pool['tokenB']}}/{{pool['tokenA']}}">
+                        add
+                    </mat-icon>
+                </td>
+
+                <td class="flex-end">
+                    <mat-icon appDebounceClick
+                    routerLink="/pool/view/{{pool['poolAddress']}}">
+                        open_in_new
+                    </mat-icon>
+                </td>
+            </tr>
+        </ng-container>
+    </table>
+</div>

@@ -1,0 +1,36 @@
+<div class="back-icon" routerLink="/pool">
+    <mat-icon>arrow_back_ios_new</mat-icon>
+</div>
+
+<h1>Create Liquidity Pool</h1>
+<div class="lpA-container" (click)="openTokenSelectDialog('tokenA')">
+    <span>{{token.get('tokenASymbol').value}}</span>
+    <span><mat-spinner *ngIf="tokenALoading" diameter="20"></mat-spinner></span>
+</div>
+
+<div class="add-icon-container">
+    <mat-icon>add</mat-icon>
+</div>
+
+<div class="lpB-container" (click)="openTokenSelectDialog('tokenB')">
+    <span *ngIf="token.get('tokenBSymbol').value === ''">
+        Select token pair
+    </span>
+
+    <span *ngIf="token.get('tokenBSymbol').value !== ''">
+        {{token.get('tokenBSymbol').value}}
+    </span>
+</div>
+
+<div class="error" *ngIf="error">
+    {{poolMessage}}
+</div>
+
+<div class="deploy-button-container">
+    <button class="mat-stroked-button-color"
+    mat-stroked-button
+    appDebounceClick
+    (click)="deployPoolPair()">
+    Deploy Pool
+    </button>
+</div>

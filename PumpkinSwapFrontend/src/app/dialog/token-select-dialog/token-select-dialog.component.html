@@ -1,0 +1,23 @@
+<h1 mat-dialog-title matDialogTitle>
+    <mat-toolbar role="toolbar" class="task-header">
+        <span>Select a token</span>
+        <span class="fx-spacer"></span>
+         <button mat-icon-button matDialogClose>
+            <mat-icon mat-list-icon>close</mat-icon>
+        </button>
+    </mat-toolbar>
+</h1>
+
+<div class="input-container">
+    <input type="text" autocomplete="off" matInput placeholder="Search name or paste address" (input)="search($event.target)">
+</div>
+
+<div class="tokens-container">
+    <div class="token" *ngFor="let token of trustedTokens;" (click)="select(token.scriptHash)">
+        {{token.symbol}}
+    </div>
+</div>
+
+<div class="spinner-container" *ngIf="loading">
+    <mat-spinner diameter="50"></mat-spinner>
+</div>

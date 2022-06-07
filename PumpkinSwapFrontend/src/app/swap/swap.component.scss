@@ -1,0 +1,181 @@
+:host
+{
+   color: white;
+   width: 26rem;
+   padding: 20px 0;
+}
+
+
+input.mat-input-element {
+    color: white;
+}
+
+.down-icon-container
+{
+   display: flex;
+   justify-content: center;
+   margin: -5px;
+
+   .mat-icon
+   {
+   font-size: 30px;
+   width: 30px;
+   height: 30px;
+   }
+}
+
+ .swap-button-container
+ {
+   margin-top: 20px;
+   margin-bottom: 20px;
+   button
+   {
+      width: 100%;
+      padding: 4px 0;
+   }
+}
+
+.tokenA-container,
+.tokenB-container
+{
+   display: flex;
+   padding: 10px 15px;
+   border-radius: 5px;
+   border-top-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   font-size: 16px;
+   background: #123c39;
+   white-space: nowrap;
+
+   input
+   {
+      width: 100%;
+   }
+
+   span
+   {
+      cursor: pointer;
+      padding: 10px 10px;
+      padding-left: 18px;
+      background: #0e2b42;
+      border-radius: 5px;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+   }
+}
+
+::placeholder {
+   color: gray;
+   opacity: 1; 
+ }
+
+ input
+ {
+   background: unset;
+   border: unset;
+   flex: 1 1 0;
+ }
+ 
+ input:focus{
+   outline: none;
+}
+
+*:focus {
+   outline: none;
+}
+
+.spinner-container
+{
+   display: flex;
+   justify-content: center;
+   margin-top: 1vh;
+   margin-bottom: 1vh;
+}
+
+.mat-expansion-panel
+{
+   box-shadow: unset;
+   background: unset;
+
+   .mat-expansion-panel-header-title
+   {
+      color: gray;
+      font-size: 13px;
+   }
+}
+
+::ng-deep .mat-expansion-indicator:after {
+   color: gray;
+}
+
+.transaction-row-details
+{
+   display: flex;
+   justify-content: space-between;
+   color: gray;
+   font-size: 13px;
+   padding: 2px;
+}
+
+.pc
+{
+   display: flex;
+   justify-content: center;
+   color: gray;
+   font-size: 13px;
+   padding: 3px;
+
+   .lpp
+   {
+      display: flex;
+      align-items: center;
+      .mat-icon
+      {
+         transform: scale(0.8);
+         margin-top: -1px;
+      }
+   }
+
+   .lpp:last-of-type
+   {
+      .mat-icon
+      {
+         display: none;
+      }
+   }
+}
+
+.ssc
+{
+   // color: #cbe521;
+   letter-spacing: 0.1mm;
+   font-weight: bold;
+}
+
+.mat-button.mat-primary.mat-button-disabled, .mat-button.mat-accent.mat-button-disabled, .mat-button.mat-warn.mat-button-disabled, .mat-button.mat-button-disabled.mat-button-disabled, .mat-icon-button.mat-primary.mat-button-disabled, .mat-icon-button.mat-accent.mat-button-disabled, .mat-icon-button.mat-warn.mat-button-disabled, .mat-icon-button.mat-button-disabled.mat-button-disabled, .mat-stroked-button.mat-primary.mat-button-disabled, .mat-stroked-button.mat-accent.mat-button-disabled, .mat-stroked-button.mat-warn.mat-button-disabled, .mat-stroked-button.mat-button-disabled.mat-button-disabled
+{
+   border-color: gray !important;
+   color: gray;
+}
+
+.err
+{
+   display: flex;
+   justify-content: center;
+   color: crimson;
+   margin: 15px 0;
+   font-weight: bold;
+}
+
+.swa
+{
+   display: flex;
+   justify-content: space-between;
+   color: gray;
+   font-size: 12px;
+   font-weight: bold;
+   padding: 0 20px;
+}

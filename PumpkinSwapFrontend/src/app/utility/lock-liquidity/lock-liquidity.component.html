@@ -1,0 +1,121 @@
+<div *ngIf="liquidityToLock.get('contract').value === ''">
+    <div class="back-icon" routerLink="/utility">
+        <mat-icon>arrow_back_ios_new</mat-icon>
+    </div>
+
+    <div class="spc" *ngIf="!liquidityLoaded">
+        <mat-spinner></mat-spinner>
+    </div>
+
+    <div *ngIf="liquidityLoaded && this.liquidity.length === 0">
+        <h1 class="fc">No liquidity found!</h1>
+    </div>
+
+    <div *ngIf="liquidityLoaded && this.liquidity.length > 0">
+        <h1>Available</h1>
+    
+        <div class="lp-container">
+            <table class="full-width">
+                <tr>
+                <th>Liquidity</th>
+                <th>Amount</th>
+                <th></th>
+                </tr>
+                
+                <tr *ngFor="let lp of liquidity">
+                    <td class="lpth">{{lp.tokenA}} / {{lp.tokenB}}</td>
+                    <td>{{lp.amount | amountConverter}}</td>
+                    <td class="flex-end">
+                        <button class="mat-stroked-button-color"
+                        mat-stroked-button
+                        appDebounceClick
+                        (click)="lock(lp)">Lock Liquidity</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div *ngIf="fullyLoaded">
+        <h1>Locked</h1>
+        <div class="lp-container">
+            <table class="full-width">
+                <tr>
+                    <th>Liquidity</th>
+                    <th>Amount</th>
+                    <th class="flex-end">Unlock</th>
+                </tr>
+                
+                <tr *ngFor="let lp of lockedUpLiquidity">
+                    <td class="lpth">{{getSymbol(lp.contract)}}</td>
+                    <td>{{lp.amount | amountConverter}}</td>
+                    <td *ngIf="lp.endDate.getTime() < now.getTime()" class="flex-end">
+                        <button class="mat-stroked-button-color"
+                        mat-stroked-button
+                        appDebounceClick
+                        (click)="unlock(lp)">Unlock</button>
+                    </td>
+                    <td *ngIf="lp.endDate.getTime() > now.getTime()" class="flex-end">{{lp.endDate.toLocaleString()}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="liquidityToLock.get('contract').value !== ''" class="lock-liquidity-container">
+
+    <div class="back-icon" (click)="back()">
+        <mat-icon>arrow_back_ios_new</mat-icon>
+    </div>
+
+    <h1>Lock Liquidity</h1>
+
+    <div class="warning-container">
+        <mat-icon class="icon-img">warning_amber</mat-icon>
+    </div>
+
+    <div class="ic">
+        <span>Locking up liquidity is ment for contract owners only!</span>
+        <span>It can be used to increase trust around the community</span>
+        <span>By locking your liquidity, you will be unable to convert it back</span>
+        <span>until the lockup period has passed</span>
+        <span>Proceed at your own risk</span>
+    </div>
+
+
+    <div class="llsc">
+        <span class="lls">{{liquidityToLock.get('symbol').value}}</span>
+    </div>
+
+    <form [formGroup]="liquidityToLock">
+
+        <div class="lcc rwsb">
+            <span>Available</span>
+            <span><input type="number" [readonly]="true" autocomplete="off" matInput formControlName="totalAmount" /></span>
+        </div>
+
+        
+        <div class="lcc rwsb">
+            <span>Lock</span>
+            <span><input type="number" autocomplete="off" matInput formControlName="lockAmount" /></span>
+        </div>
+
+        <span class="message" *ngIf="showLockedAmountMessage">Minimum liquidity of 80% is recommended to lock up</span>
+    
+        <div class="lcc rwsb">
+            <span>Lockup Period (days)</span>
+            <span><input type="number" autocomplete="off" matInput formControlName="length" /></span>
+        </div>
+
+        <span class="message" *ngIf="showLockedUpLengthMessage">Minimum of 3 years (1 095 days) is recommended</span>
+    </form>
+    
+
+    <div class="buttom-container">
+        <button class="mat-stroked-button-color"
+                mat-stroked-button
+                appDebounceClick
+                (click)="confirm()">Confirm Liquidity Lockup</button>
+    </div>
+</div>

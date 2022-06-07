@@ -1,0 +1,68 @@
+:host
+{
+    width: 40rem;
+}
+
+.vpc
+{
+    display: flex;
+}
+
+.vpdc
+{
+    flex: 2 1 0;
+    margin-left: -3rem;
+}
+
+.vpd
+{
+    flex: 1 1 0;
+}
+
+.ts
+{
+    color: #cbe521;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.1mm;
+    margin-bottom: 5rem;
+}
+
+.vpd
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.vpdr
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 1px 0;
+}
+
+.pl
+{
+    padding-left: 15px;
+    color: gray;
+}
+.sc
+{
+    padding: 1.5rem;
+}
+
+.full-width
+{
+    width: 100%;
+
+    .flex-end
+    {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+h1
+{
+    margin-top: 4vh;
+}

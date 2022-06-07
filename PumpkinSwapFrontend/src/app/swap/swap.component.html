@@ -1,0 +1,98 @@
+<h1>Swap</h1>
+
+<div *ngIf="swap.get('tokenAAvailable').value !== ''" class="swa">
+    <span>Available</span>
+    <span>{{swap.get('tokenAAvailable').value | amountConverter}}</span>
+</div>
+<div class="tokenA-container">
+    <input 
+        type="text" 
+        autocomplete="off" 
+        value="{{swap.get('tokenAAmount').value}}" 
+        matInput 
+        (input)="tokenAAmountInput($event.target)" 
+        placeholder="0.0">
+
+    <span class="ssc" (click)="openTokenSelectDialog('tokenA')"
+        *ngIf="swap.get('tokenASymbol').value !== ''">{{swap.get('tokenASymbol').value}} <mat-icon>keyboard_arrow_down</mat-icon></span>
+    <span class="ssc" (click)="openTokenSelectDialog('tokenA')" 
+        *ngIf="swap.get('tokenASymbol').value === ''">Selet a token <mat-icon>keyboard_arrow_down</mat-icon></span>
+</div>
+
+<div class="down-icon-container" (click)="swapOrder()">
+    <mat-icon>keyboard_arrow_down</mat-icon>
+</div>
+
+<div class="tokenB-container">
+    <input type="number" autocomplete="off" value="{{swap.get('tokenBAmount').value}}" matInput (input)="tokenBAmountInput($event.target)" placeholder="0.0">
+    <span class="ssc" (click)="openTokenSelectDialog('tokenB')" 
+        *ngIf="swap.get('tokenBSymbol').value !== ''">{{swap.get('tokenBSymbol').value}}<mat-icon>keyboard_arrow_down</mat-icon></span>
+    <span class="ssc" (click)="openTokenSelectDialog('tokenB')" 
+        *ngIf="swap.get('tokenBSymbol').value === ''">Selet a token <mat-icon>keyboard_arrow_down</mat-icon></span>
+</div>
+
+<div class="spinner-container" *ngIf="loading">
+    <mat-spinner diameter="50"></mat-spinner>
+</div>
+
+<div *ngIf="swap.get('tokenBPerTokenA').value !== 0">
+    <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                1 {{swap.get('tokenBSymbol').value}} ≈ {{swap.get('tokenBPerTokenA').value.toFixed(5)}} {{swap.get('tokenASymbol').value}} 
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="transaction-row-details">
+            <span>Expected</span>
+            <span>{{swap.get('expected').value}} {{swap.get('tokenBSymbol').value}}</span>
+          </div>
+          
+          <div class="transaction-row-details" *ngIf="callSwapTokenOutForTokenIn">
+            <span>Maximum sent after slippage </span>
+            <span>{{swap.get('amountInMax').value}} {{swap.get('tokenASymbol').value}}</span>
+          </div>
+
+          <div class="transaction-row-details" *ngIf="!callSwapTokenOutForTokenIn">
+            <span>Minimum received after slippage</span>
+            <span>{{swap.get('amountOutMin').value}} {{swap.get('tokenBSymbol').value}}</span>
+          </div>
+
+          <div class="transaction-row-details">
+            <span>Liquidity Fee</span>
+            <span>{{swap.get('tokenAFee').value}} {{swap.get('tokenASymbol').value}}</span>
+          </div>
+
+          <div class="pc">
+              <div class="lpp" *ngFor="let lp of lpPath">
+                  <span>{{lp.symbol}}</span>
+                  <mat-icon>chevron_right</mat-icon>
+              </div>
+          </div>
+          
+        </mat-expansion-panel>
+    </mat-accordion>
+    
+</div>
+
+
+<div class="err" *ngIf="!poolExist">Exchange not found!</div>
+
+<div class="swap-button-container">
+    <button *ngIf="!swapping" class="mat-stroked-button-color"
+    mat-stroked-button
+    appDebounceClick
+    [disabled]="!poolExist"
+    (click)="swapToken()">
+    Swap
+    </button>
+</div>
+
+<div class="spinner-container" *ngIf="swapping">
+    <mat-spinner diameter="40"></mat-spinner>
+</div>
+
+<div class="txc" *ngIf="txId !== ''">
+    <p>Your transaction has been broadcasted to the network</p>
+    <a target="_blank" href="https://neo3.testnet.neotube.io/transaction/{{txId}}">Check the progress on NeoTube</a>
+</div>

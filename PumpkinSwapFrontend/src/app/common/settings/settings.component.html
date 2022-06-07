@@ -1,0 +1,12 @@
+<div class="settings-row header" (click)="openSettings()">
+    <span>Settings</span>
+    <mat-icon>settings</mat-icon>
+</div>
+<div class="settings-row">
+    <span>Slippage</span>
+    <span>{{service.settings.get('slippage').value}} %</span>
+</div>
+<div class="settings-row">
+    <span>Deadline</span>
+    <span>{{service.settings.get('deadline').value}} minutes</span>
+</div>

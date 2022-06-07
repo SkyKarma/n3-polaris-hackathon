@@ -1,0 +1,12 @@
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapRouter/src/bin/Debug/net5.0/PumpkinSwapRouterContract.deps.json
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapRouter/src/bin/Debug/net5.0/PumpkinSwapRouterContract.dll
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapRouter/src/bin/Debug/net5.0/PumpkinSwapRouterContract.pdb
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapRouter/src/obj/Debug/net5.0/PumpkinSwapRouterContract.csproj.AssemblyReference.cache
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapRouter/src/obj/Debug/net5.0/PumpkinSwapRouterContract.GeneratedMSBuildEditorConfig.editorconfig
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapRouter/src/obj/Debug/net5.0/PumpkinSwapRouterContract.AssemblyInfoInputs.cache
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapRouter/src/obj/Debug/net5.0/PumpkinSwapRouterContract.AssemblyInfo.cs
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapRouter/src/obj/Debug/net5.0/PumpkinSwapRouterContract.csproj.CoreCompileInputs.cache
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapRouter/src/obj/Debug/net5.0/PumpkinSwapRouterContract.dll
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapRouter/src/obj/Debug/net5.0/refint/PumpkinSwapRouterContract.dll
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapRouter/src/obj/Debug/net5.0/PumpkinSwapRouterContract.pdb
+/home/s/Documents/GitHub/Neo-polaris-pumpkinswap/contracts/PumpkinSwapRouter/src/obj/Debug/net5.0/ref/PumpkinSwapRouterContract.dll

@@ -1,0 +1,82 @@
+.back-icon
+{
+    margin-bottom: 4vh;
+    cursor: pointer;
+}
+
+:host
+{
+   width: 26rem;
+   color: white;
+}
+
+.lpA-container,
+.lpB-container
+{
+   display: flex;
+   padding: 20px;
+   border-radius: 5px;
+   border-top-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   font-size: 16px;
+   background: #123c39;
+   cursor: pointer;
+   font-weight: bold;
+   letter-spacing: 0.1mm;
+
+   span:first-of-type
+   {
+      flex: 1 1 0;
+   }
+}
+
+::placeholder {
+   color: gray;
+   opacity: 1; 
+ }
+
+ input
+ {
+   background: unset;
+   border: unset;
+   flex: 1 1 0;
+ }
+ 
+ input:focus{
+   outline: none;
+}
+
+*:focus {
+   outline: none;
+}
+
+.add-icon-container
+{
+   display: flex;
+   justify-content: center;
+
+   .mat-icon
+   {
+   font-size: 30px;
+   width: 30px;
+   height: 30px;
+   }
+}
+
+.deploy-button-container
+{
+  margin-top: 25px;
+  button
+  {
+     width: 100%;
+     padding: 4px 0;
+  }
+}
+
+.error
+{
+   display: flex;
+   justify-content: center;
+   margin: 20px;
+   color: crimson;
+}

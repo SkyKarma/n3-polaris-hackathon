@@ -1,0 +1,160 @@
+:host
+{
+    width: 32rem;
+}
+
+table
+{
+    border-spacing: 0 1em;
+    border-collapse: separate;
+}
+
+.lock-liquidity-container
+{
+    color: white;
+}
+
+.lp-container
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rwsb
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.warning-container
+{
+    display: flex;
+    justify-content: center;
+    color: #f9a66c;
+    .icon-img
+    {
+        transform: scale(2);
+    }
+}
+
+.ic
+{
+    span
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lcc
+{
+   display: flex;
+   align-items: center;
+
+   padding: 8px 15px;
+   border-radius: 5px;
+   border-top-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   font-size: 16px;
+   background: #123c39;
+   white-space: nowrap;
+   margin: 10px 0;
+
+   span:last-of-type
+   {
+      padding: 8px 10px;
+      padding-left: 12px;
+      background: #0e2b42;
+      border-radius: 5px;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+   }
+}
+
+::placeholder {
+   color: gray;
+   opacity: 1; 
+ }
+
+ input
+ {
+   background: unset;
+   border: unset;
+   flex: 1 1 0;
+ }
+ 
+ input:focus{
+   outline: none;
+}
+
+*:focus {
+   outline: none;
+}
+
+.llsc
+{
+    padding: 20px 0;
+    .lls
+    {
+        color: #f9a66c;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+.message
+{
+    display: flex;
+    justify-content: center;
+    color: crimson;
+    font-weight: bold;
+}
+
+.buttom-container
+{
+    padding-top: 10px;
+
+    .mat-stroked-button-color
+    {
+        width: 100%;
+    }
+}
+
+h1
+{
+    padding-top: 30px;
+}
+
+.flex-end
+{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fc
+{
+    display: flex;
+    justify-content: center;
+}
+
+button
+{
+    color: white;
+    border-color: white !important;
+}
+
+.lpth
+{
+    color:#cbe521;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.1mm;
+}
